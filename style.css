@@ -56,4 +56,24 @@
     padding: 0;
     padding-top: 151.0625%;
 }
+#corpo .categorias::before {
+    padding: 0;
+    padding-top: 0;
+}
+#corpo .categoria-Mobile1::before {
+    padding: 0;
+    padding-top: 35.5%;
+}
+
+#corpo .categoria-Mobile1 picture {
+ margin:0;
+ padding:0;
+}
+#corpo .categoria-Mobile1 picture img{
+  width:149px;
+}
+#corpo .categoria-Mobile1 .owl-dots{
+  color:#AAAAAA;
+}
+
 }
