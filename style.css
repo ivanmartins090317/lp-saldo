@@ -83,9 +83,10 @@
 #corpo .categoria-Mobile1 picture img{
   width:92%;
 }
-#corpo .categoria-Mobile1 .owl-dots{
-  color:#AAAAAA;
-}
+    #corpo .owl-dots { display: block; position: relative; margin: 3% auto; width: 100%; text-align: center; }
+    #corpo .owl-dots .owl-dot { display: inline-block; position: relative; outline: none;}
+    #corpo .owl-dots .owl-dot span { display: block; background-color: none; outline: 1px solid #aaaaaa; width: 8px; height: 8px; margin: 0 5px; border-radius: 250px;}
+    #corpo .owl-dots .owl-dot:hover span, #corpo .owl-dots .owl-dot.active span { background-color: #8f8e8e; }
 /* text-footer */
     #corpo .texto-footer {width: 88%; font-size: 2.6vw; line-height: 170%;margin:10% auto; }
 }
