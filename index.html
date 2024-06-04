@@ -170,27 +170,28 @@
                     console.log('mobile')
 
                     $('.fast_rotativo_header').owlCarousel({
-                    items: 1,
-                    loop: true,
-                    smartSpeed: 600,
-                    dots:true,
-                    responsiveClass: false,
-                   //nav: true,
-                   //navText: ['<img src="https://www.fastshop.com.br/wcsstore/FastShop/img/internas/rotativo_seta_esq.png">', '<img src="https://www.fastshop.com.br/wcsstore/FastShop/img/internas/rotativo_seta_dir.png">'],
-                    responsive:{ 0:{ items: 2.4 } },
-                    autoplay: false,
-                    autoplayTimeout: 0,
-                    autoplayHoverPause: false
+                    
+                            items: 1,
+                            loop: true,
+                            smartSpeed: 600,
+                            responsiveClass: true,
+                        // nav: true,
+                        //navText: ['<img src="https://www.fastshop.com.br/wcsstore/FastShop/img/internas/rotativo_seta_esq.png">', '<img src="https://www.fastshop.com.br/wcsstore/FastShop/img/internas/rotativo_seta_dir.png">'],
+                            responsive:{ 0:{ items: 2.4 } },
+                            margin:0,
+                            dots:true,
+                            autoplay: false,
+                            autoplayTimeout: 0,
+                            autoplayHoverPause: false
                   });
                 } else {
-                    document.querySelector('.cat-desktop').style.display = 'block';
+                    document.querySelector('.cat-desktop').style.display = 'flex';
                      document.querySelector('.categoria-Mobile1').style.display = 'none';
                     // document.querySelector('.wrapper-aspect-ratio modelo-Mobile1').style.display = 'none';
                     console.log('desk')
                 }
         
            
-        
 
 /*
      document.addEventListener('DOMContentLoaded', function () {

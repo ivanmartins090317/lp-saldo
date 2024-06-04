@@ -64,16 +64,28 @@
     padding: 0;
     padding-top: 35.5%;
 }
+/* texto top */
+#corpo .texto-principal {
+    width: 97%;
+    margin: 11% auto;
+}
+#corpo .texto-principal h2{font-size: 4.6vw; margin-bottom:4%}
+#corpo .texto-principal p{font-size: 2.6vw;}
+#corpo .texto-principal p.margin-top-botton {width: 92%;line-height: 170%; margin: 4.7% auto;}
+#corpo .texto-principal p.semi-bold {font-size: 4vw; width: 89%; margin:0 auto}
+#corpo .texto-footer { width: 66%;font-size: 2.3vw;}
 
+/*carroussel */
 #corpo .categoria-Mobile1 picture {
  margin:0;
  padding:0;
 }
 #corpo .categoria-Mobile1 picture img{
-  width:149px;
+  width:92%;
 }
 #corpo .categoria-Mobile1 .owl-dots{
   color:#AAAAAA;
 }
-
+/* text-footer */
+    #corpo .texto-footer {width: 88%; font-size: 2.6vw; line-height: 170%;margin:10% auto; }
 }
