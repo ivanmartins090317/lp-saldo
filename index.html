@@ -89,10 +89,6 @@
                     <picture>
                         <img src="files/cat-mobile-tv.png"
                             alt="categoria-tv">
-                        <span class="none" >
-                            <img class="imagem-modal" src="files/modal_01.png" alt="modal informativo">
-                            <span class="fecha-modal" data-modal="open-modal"></span>
-                        </span>
                         <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
                     </picture>
                     <picture>
@@ -131,6 +127,37 @@
             </div>
         </div>
 
+    </div>
+
+    <div class="modal-mobile">
+        <span class="none">
+            <img class="imagem-modal" src="files/modal_01.png" alt="modal informativo">
+            <span class="fecha-modal" data-modal="open-modal"></span>
+        </span>
+        <span class="none">
+            <img class="imagem-modal" src="files/modal_02.png" alt="modal informativo">
+            <span class="fecha-modal" data-modal="open-modal"></span>
+        </span>
+        <span class="none">
+            <img class="imagem-modal" src="files/modal_03.png" alt="modal informativo">
+            <span class="fecha-modal" data-modal="open-modal"></span>
+        </span>
+        <span class="none">
+            <img class="imagem-modal" src="files/modal_04.png" alt="modal informativo">
+            <span class="fecha-modal" data-modal="open-modal"></span>
+        </span>
+        <span class="none">
+            <img class="imagem-modal" src="files/modal_04.png" alt="modal informativo">
+            <span class="fecha-modal" data-modal="open-modal"></span>
+        </span>
+        <span class="none">
+            <img class="imagem-modal" src="files/modal_06.png" alt="modal informativo">
+            <span class="fecha-modal" data-modal="open-modal"></span>
+        </span>
+        <span class="none">
+            <img class="imagem-modal" src="files/modal_07.png" alt="modal informativo">
+            <span class="fecha-modal" data-modal="open-modal"></span>
+        </span>
     </div>
 
     <!-- texto footer -->
@@ -198,31 +225,47 @@
 
          const spanModal = categoriasBTNMobile.querySelectorAll("picture span")
         const modalMobile = categoriasBTNMobile.querySelector("picture span")
-         
-      console.log(modalMobile);
-
+         const modals = document.querySelectorAll('.modal-mobile span.none')
+       
         //  const arrayModal = Array.from(modais)
-        console.log(modais[0]);
-         const showModal = (number) => modais[number].showModal()
+        console.log(modals);
+       const closeAllModals = () => {
+            modals.forEach(modal => {
+                modal.classList.remove('show');
+                modal.classList.add('none');
+            });
+        };
+
+        const showModal = (number) => {
+            closeAllModals();  
+            modals[number].classList.remove('none');
+            modals[number].classList.add('show');
+        };
         // showModal(0)
-        //  const directionForModal = (modal) => ({
-        //   'categoria-tv': showModal(0)
-        //  })[modal]
+         const directionForModal = (categoria) => ({
+          'categoria-tv':() => showModal(0),
+          'categoria-info':() =>showModal(1),
+          'categoria-smartphones':() =>showModal(2),
+          'categoria-audio':() =>showModal(3),
+          'categoria-eletro':() =>showModal(4),
+          'categoria-games':() => showModal(5),
+          'categoria-apple':() => showModal(6),
+         })[categoria]
 
        imageCatMobile.forEach(img => {
             img.addEventListener('click', (e) => {
-                
                 const isElement = e.target
-                console.log(isElement.nextElementSibling);
+                  console.log(isElement.alt);
+               
+
+                    directionForModal(isElement.alt)()
                 
-                isElement.nextElementSibling.classList.remove('none')
-                isElement.nextElementSibling.classList.add('show')
-                // directionForModal(isElement.alt)
-                // if(isElement.alt === 'categoria-tv'){
-                //     console.log('isso é tv');
-                // }
+                
+                
             });
         });
+
+
 
         fechaModal.forEach(fecha =>{
             fecha.addEventListener('click', () => {
