@@ -43,38 +43,42 @@
                 <img width="100%" height="auto" src="files/cat_info.png" alt="Categoria de produtos">
             </picture>
             <dialog class="02">
-                <img class="imagem-modal" src="" alt="modal informativo">
+                <img class="imagem-modal" src="files/modal_02.png" alt="modal informativo">
                 <span class="fecha-modal"></span>
             </dialog>
             <picture>
                 <img width="100%" height="auto" src="files/cat_smartphone.png" alt="Categoria de produtos">
             </picture>
-            <dialog class="02">
-                <img class="imagem-modal" src="" alt="modal informativo">
+            <dialog class="03">
+                <img class="imagem-modal" src="files/modal_03.png" alt="modal informativo">
                 <span class="fecha-modal"></span>
             </dialog>
             <picture>
                 <img width="100%" height="auto" src="files/cat_audio.png" alt="Categoria de produtos">
             </picture>
-            <dialog class="02">
-                <img class="imagem-modal" src="" alt="modal informativo">
+            <dialog class="04">
+                <img class="imagem-modal" src="files/modal_04.png" alt="modal informativo">
                 <span class="fecha-modal"></span>
             </dialog>
             <picture>
                 <img width="100%" height="auto" src="files/cat_eletro.png" alt="Categoria de produtos">
             </picture>
+            <dialog class="05">
+                <img class="imagem-modal" src="files/modal_05.png" alt="modal informativo">
+                <span class="fecha-modal"></span>
+            </dialog>
             <picture>
                 <img width="100%" height="auto" src="files/cat_games.png" alt="Categoria de produtos">
             </picture>
-            <dialog class="02">
-                <img class="imagem-modal" src="" alt="modal informativo">
+            <dialog class="05">
+                <img class="imagem-modal" src="files/modal_06.png" alt="modal informativo">
                 <span class="fecha-modal"></span>
             </dialog>
             <picture>
                 <img width="100%" height="auto" src="files/cat_apple.png" alt="Categoria de produtos">
             </picture>
-            <dialog class="02">
-                <img class="imagem-modal" src="" alt="modal informativo">
+            <dialog class="06">
+                <img class="imagem-modal" src="files/modal_07.png" alt="modal informativo">
                 <span class="fecha-modal"></span>
             </dialog>
         </div>
@@ -83,40 +87,43 @@
             <div class="inner">
                 <div id="fast_rotativo_header" class="owl-carousel fast_rotativo_header">
                     <picture>
-                        <img src="files/cat_tv_mobile.png"
+                        <img src="files/cat-mobile-tv.png"
                             alt="categoria-tv">
+                        <span class="none" >
+                            <img class="imagem-modal" src="files/modal_01.png" alt="modal informativo">
+                            <span class="fecha-modal" data-modal="open-modal"></span>
+                        </span>
                         <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
                     </picture>
                     <picture>
-                        <img src="files/cat_info_mobile.png"
+                        <img src="files/cat-mobile-info.png"
                             alt="categoria-info">
                         <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
                     </picture>
         
                     <picture>
-                        <img src="files/cat_smartphones_mobile.png"
+                        <img src="files/cat-mobile-smartphones.png"
                             alt="categoria-smartphones">
                         <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
                     </picture>
                     <picture>
-                        <img src="files/cat_tv_mobile.png"
+                        <img src="files/cat-mobile-audio.png"
                             alt="categoria-audio">
                         <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
                     </picture>
         
-                    <picture>
-                        <img src="files/cat_info_mobile.png"
-                            alt="categoria-eletro">
-                        <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
-                    </picture>
+                <picture>
+                    <img src="files/cat-mobile-eletro.png" alt="categoria-eletro">
+                    <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
+                </picture>
         
                     <picture>
-                        <img src="files/cat_smartphones_mobile.png"
+                        <img src="files/cat-mobile-games.png"
                             alt="categoria-games">
                         <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
                     </picture>
                     <picture>
-                        <img src="files/cat_smartphones_mobile.png"
+                        <img src="files/cat-mobile-apple.png"
                             alt="categoria-apple">
                         <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
                     </picture>
@@ -171,10 +178,8 @@
         const categoriasBTN =  document.querySelector('.cat-desktop')
         const modal = document.querySelector('dialog')
         const imagemCat = categoriasBTN.querySelectorAll("picture img")
-        const fechaModal = document.querySelector('.fecha-modal')
-    //    categoriasBTN.addEventListener('click', () => categoriasBTN.children[1].showModal())
-    //    fechaModal.addEventListener('click', () => modal.close())
-       console.log(modal);
+        const fechaModal = document.querySelectorAll('.fecha-modal')
+
 
        imagemCat.forEach(img => {
             img.addEventListener('click', (e) => {
@@ -183,24 +188,51 @@
                 modalDaCategoria.showModal()
             });
         });
-
+        
+    
         // modal mobile
           const categoriasBTNMobile = document.querySelector('.categoria-Mobile1')
         const imageCatMobile = categoriasBTNMobile.querySelectorAll("picture img")
          const modais = document.querySelectorAll('dialog')
-         console.log(imageCatMobile);
+
+
+         const spanModal = categoriasBTNMobile.querySelectorAll("picture span")
+        const modalMobile = categoriasBTNMobile.querySelector("picture span")
+         
+      console.log(modalMobile);
+
+        //  const arrayModal = Array.from(modais)
+        console.log(modais[0]);
+         const showModal = (number) => modais[number].showModal()
+        // showModal(0)
+        //  const directionForModal = (modal) => ({
+        //   'categoria-tv': showModal(0)
+        //  })[modal]
+
        imageCatMobile.forEach(img => {
             img.addEventListener('click', (e) => {
-                Array.from(modais).map(modal => console.log(modal))
+                
                 const isElement = e.target
-                if(isElement.alt === 'categoria-tv'){
-                    console.log('isso é tv');
-                }
+                console.log(isElement.nextElementSibling);
+                
+                isElement.nextElementSibling.classList.remove('none')
+                isElement.nextElementSibling.classList.add('show')
+                // directionForModal(isElement.alt)
+                // if(isElement.alt === 'categoria-tv'){
+                //     console.log('isso é tv');
+                // }
             });
         });
 
-        fechaModal.addEventListener('click', () => {
-            modal.close();
+        fechaModal.forEach(fecha =>{
+            fecha.addEventListener('click', () => {
+                console.log('aqui');
+                modal.close();
+                // window.location.reload() para ler o script novament
+                window.location.reload();
+
+        })
+           
         });
 
 
