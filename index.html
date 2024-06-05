@@ -35,24 +35,48 @@
             <picture >
                 <img width="100%" height="auto" src="files/cat_tv.png" alt="Categoria de produtos">
             </picture>
+            <dialog class="01">
+                <img class="imagem-modal" src="files/modal_01.png" alt="modal informativo">
+                <span class="fecha-modal"></span>
+            </dialog>
             <picture>
                 <img width="100%" height="auto" src="files/cat_info.png" alt="Categoria de produtos">
             </picture>
+            <dialog class="02">
+                <img class="imagem-modal" src="" alt="modal informativo">
+                <span class="fecha-modal"></span>
+            </dialog>
             <picture>
                 <img width="100%" height="auto" src="files/cat_smartphone.png" alt="Categoria de produtos">
             </picture>
+            <dialog class="02">
+                <img class="imagem-modal" src="" alt="modal informativo">
+                <span class="fecha-modal"></span>
+            </dialog>
             <picture>
                 <img width="100%" height="auto" src="files/cat_audio.png" alt="Categoria de produtos">
             </picture>
+            <dialog class="02">
+                <img class="imagem-modal" src="" alt="modal informativo">
+                <span class="fecha-modal"></span>
+            </dialog>
             <picture>
                 <img width="100%" height="auto" src="files/cat_eletro.png" alt="Categoria de produtos">
             </picture>
             <picture>
                 <img width="100%" height="auto" src="files/cat_games.png" alt="Categoria de produtos">
             </picture>
+            <dialog class="02">
+                <img class="imagem-modal" src="" alt="modal informativo">
+                <span class="fecha-modal"></span>
+            </dialog>
             <picture>
                 <img width="100%" height="auto" src="files/cat_apple.png" alt="Categoria de produtos">
             </picture>
+            <dialog class="02">
+                <img class="imagem-modal" src="" alt="modal informativo">
+                <span class="fecha-modal"></span>
+            </dialog>
         </div>
        <!-- modelo mobile -->
         <div class="wrapper-aspect-ratio categoria-Mobile1">
@@ -60,36 +84,40 @@
                 <div id="fast_rotativo_header" class="owl-carousel fast_rotativo_header">
                     <picture>
                         <img src="files/cat_tv_mobile.png"
-                            alt="Banner Namorados">
+                            alt="categoria-tv">
                         <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
                     </picture>
-        
                     <picture>
                         <img src="files/cat_info_mobile.png"
-                            alt="Banner Drink chocolate">
+                            alt="categoria-info">
                         <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
                     </picture>
         
                     <picture>
                         <img src="files/cat_smartphones_mobile.png"
-                            alt="Banner Rotulos de vinhos">
+                            alt="categoria-smartphones">
                         <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
                     </picture>
                     <picture>
                         <img src="files/cat_tv_mobile.png"
-                            alt="Banner Namorados">
+                            alt="categoria-audio">
                         <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
                     </picture>
         
                     <picture>
                         <img src="files/cat_info_mobile.png"
-                            alt="Banner Drink chocolate">
+                            alt="categoria-eletro">
                         <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
                     </picture>
         
                     <picture>
                         <img src="files/cat_smartphones_mobile.png"
-                            alt="Banner Rotulos de vinhos">
+                            alt="categoria-games">
+                        <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
+                    </picture>
+                    <picture>
+                        <img src="files/cat_smartphones_mobile.png"
+                            alt="categoria-apple">
                         <!-- <a href="https://www.fastshop.com.br/web/c/4611686018425260530/Vinho?top=Y"></a> -->
                     </picture>
                 </div>
@@ -108,66 +136,15 @@
 </div>
 
 <script>
-            //Rotativo Quick Filter
-        // var carouselDelay = 1000;
-        
-        // if (carouselDelay) {
-        //    setTimeout(function() {
-              
-        //       var larguraDaTela = window.innerWidth;
-        //         // Se a largura da tela for menor que 787px
-        //         if (larguraDaTela < 1100) {
-        //             document.querySelector('#fast_rotativo').style.display = 'block';
-        //             console.log('mobile')
-        //         } else {
-        //             document.querySelector('#fast_rotativo').style.display = 'block';
-        //             console.log('desk')
-        //         }
-        
-        //       $('#fast_rotativo').owlCarousel({
-        //       items: 1,
-        //       loop: false,
-        //       smartSpeed: 600,
-        //       responsiveClass: false,
-        //       nav: false,
-        //       navText: ['<img src="https://www.fastshop.com.br/wcsstore/FastShop/img/internas/rotativo_seta_esq.png">', '<img src="https://www.fastshop.com.br/wcsstore/FastShop/img/internas/rotativo_seta_dir.png">'],
-        //       responsive:{ 0:{ items: 2, margin: -75, }, 1100:{items: 6, mouseDrag: false} },
-        //       autoplay: false,
-        //       autoplayTimeout: 0,
-        //       autoplayHoverPause: false
-        //     });
-        //    }, carouselDelay);
-        // }
-
-        //     //Rotativo SugestÃµes
-        //     (function($) { 
-        // $('.fast_rotativo2').owlCarousel({
-        //     items: 1,
-        //     loop: true,
-        //     smartSpeed: 600,
-        //     responsiveClass: true,
-        //     nav: true,
-        //     navText: ['<img src="https://fastshopwr-a.akamaihd.net/pages/2023/12/image/esquerda.png">', '<img src="https://fastshopwr-a.akamaihd.net/pages/2023/12/image/direita.png">'],
-        //     responsive:{ 0:{ items: 3, margin: 4 } },
-        //     slideBy: 3,
-        //     autoplay: true,
-        //     autoplayTimeout: 20000,
-        //     autoplayHoverPause: true
-        // });
-        // })(jQuery);
-
 
         //Rotativo Essencial Mobile
-       
-         
-              
+        
               var larguraDaTela = window.innerWidth;
     
-            // Se a largura da tela for menor que 787px
+            // Se a largura da tela for menor que 1100px
                 if (larguraDaTela < 1100) {
                     document.querySelector('.categoria-Mobile1').style.display = 'block';
                     document.querySelector('.cat-desktop').style.display = 'none';
-                    console.log('mobile')
 
                     $('.fast_rotativo_header').owlCarousel({
                     
@@ -187,31 +164,45 @@
                 } else {
                     document.querySelector('.cat-desktop').style.display = 'flex';
                      document.querySelector('.categoria-Mobile1').style.display = 'none';
-                    // document.querySelector('.wrapper-aspect-ratio modelo-Mobile1').style.display = 'none';
-                    console.log('desk')
+                  
                 }
         
-           
+        //    lidando com modal
+        const categoriasBTN =  document.querySelector('.cat-desktop')
+        const modal = document.querySelector('dialog')
+        const imagemCat = categoriasBTN.querySelectorAll("picture img")
+        const fechaModal = document.querySelector('.fecha-modal')
+    //    categoriasBTN.addEventListener('click', () => categoriasBTN.children[1].showModal())
+    //    fechaModal.addEventListener('click', () => modal.close())
+       console.log(modal);
 
-/*
-     document.addEventListener('DOMContentLoaded', function () {
-            const links = document.querySelectorAll('#fast_rotativo a');
-            const notLastLink = Array.from(links).slice(0, -1)
-            notLastLink.forEach(link => {
-                const image = link.previousElementSibling;
-                const containCLassImage = image && image.classList.contains('hover-image')
-                
-                if (containCLassImage) {
-                    const originalSrc = image.src;
-                    const hoverSrc = image.getAttribute('data-hover');
-                        link.addEventListener('mouseenter', () => {
-                            image.src = hoverSrc;
-                        });
-                        link.addEventListener('mouseleave', () => {
-                            image.src = originalSrc;     
-                        });                
+       imagemCat.forEach(img => {
+            img.addEventListener('click', (e) => {
+                const isElement = e.target
+                const modalDaCategoria = isElement.parentElement.nextElementSibling
+                modalDaCategoria.showModal()
+            });
+        });
+
+        // modal mobile
+          const categoriasBTNMobile = document.querySelector('.categoria-Mobile1')
+        const imageCatMobile = categoriasBTNMobile.querySelectorAll("picture img")
+         const modais = document.querySelectorAll('dialog')
+         console.log(imageCatMobile);
+       imageCatMobile.forEach(img => {
+            img.addEventListener('click', (e) => {
+                Array.from(modais).map(modal => console.log(modal))
+                const isElement = e.target
+                if(isElement.alt === 'categoria-tv'){
+                    console.log('isso é tv');
                 }
             });
         });
-*/
+
+        fechaModal.addEventListener('click', () => {
+            modal.close();
+        });
+
+
+       
 </script>
